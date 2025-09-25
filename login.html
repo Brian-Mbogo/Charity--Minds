@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Login — Pure HTML</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Register</a> |
+    <a href="login.html">Login</a>
+  </nav>
+
+  <h1>Login</h1>
+
+  <!-- Login form -->
+  <!-- action="#" because this is pure HTML; change when you add a backend. -->
+  <form action="#" method="post" autocomplete="on">
+    <label for="loginIdentifier">Email or Username:</label><br />
+    <input id="loginIdentifier" name="loginIdentifier" type="text" required /><br /><br />
+
+    <label for="loginPassword">Password:</label><br />
+    <input id="loginPassword" name="loginPassword" type="password" required /><br /><br />
+
+    <input id="acceptPrivacy" name="acceptPrivacy" type="checkbox" required />
+    <label for="acceptPrivacy">I accept the <a href="#" title="Privacy Policy">Privacy Policy</a>.</label><br /><br />
+
+    <button type="submit">Login</button>
+  </form>
+
+  <hr />
+  <footer>
+    <small>Don't have an account? <a href="index.html">Register here</a>.</small>
+  </footer>
+</body>
+</html>
