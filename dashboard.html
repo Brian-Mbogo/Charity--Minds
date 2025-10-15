@@ -1,78 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard — Users</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 align="center">Registration Data Dashboard</h1>
-  <table border="1" cellpadding="8" cellspacing="0" width="90%" align="center">
-    <caption><b>Collected Registration Fields (Static)</b></caption>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>First name</th>
-        <th>Last name</th>
-        <th>Email</th>
-        <th>Username</th>
-        <th>Phone</th>
-        <th>Date of birth</th>
-        <th>Gender</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Brian</td>
-        <td>Mbogo</td>
-        <td>brian.mbogo@example.com</td>
-        <td>brianm</td>
-        <td>+254-712-345-678</td>
-        <td>2000-08-15</td>
-        <td>Male</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Cera</td>
-        <td>Wanjiru</td>
-        <td>cera.w@example.com</td>
-        <td>ceraw</td>
-        <td>+254-701-234-567</td>
-        <td>1996-02-10</td>
-        <td>Female</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>David</td>
-        <td>Otieno</td>
-        <td>d.otieno@example.com</td>
-        <td>dotieno</td>
-        <td>+254-720-111-222</td>
-        <td>1992-11-03</td>
-        <td>Male</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Sophia</td>
-        <td>Njeri</td>
-        <td>sophia.njeri@example.com</td>
-        <td>sophian</td>
-        <td>+254-733-444-555</td>
-        <td>1999-05-21</td>
-        <td>Female</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>John</td>
-        <td>Kariuki</td>
-        <td>john.k@example.com</td>
-        <td>johnk</td>
-        <td>+254-709-888-999</td>
-        <td>1988-12-29</td>
-        <td>Male</td>
-      </tr>
-    </tbody>
+  <!-- Navigation -->
+  <nav>
+  <ul>
+    <li>
+      <a href="login.html">login</a>
+    </li>
+    <li>
+      <a href="register.html">register</a>
+    </li>
+    <li>
+      <a href="dashboard.html">dashboard</a>
+    </li>
+    <li>
+      <a href="index.html">index</a>
+    </li>
+  </ul>
+  </nav>
+
+
+  <!-- Analytics Section -->
+  <section class="analytics">
+    <div class="card">
+      <h2>10</h2>
+      <p>Registered Users</p>
+    </div>
+    <div class="card">
+      <h2>7</h2>
+      <p>Children Forms Recorded</p>
+    </div>
+    <div class="card">
+      <h2>56</h2>
+      <p>Visitors</p>
+    </div>
+    <div class="card">
+      <h2>3</h2>
+      <p>New Messages</p>
+  </section>
+
+  <!-- Registered Users Table -->
+  <h2 class="section-title">Registered Users</h2>
+  <table border="1">
+
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Username</th>
+      <th>Phone</th>
+      <th>Date of Birth</th>
+      <th>Gender</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Jane</td>
+      <td>Wangeci</td>
+      <td>jane.wangeci@gmail.com</td>
+      <td>janed</td>
+      <td>+254700123456</td>
+      <td>1998-04-12</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>John</td>
+      <td>Kamau</td>
+      <td>john.kamau@gmail.com</td>
+      <td>johnny</td>
+      <td>+254701987654</td>
+      <td>1995-07-23</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Mary</td>
+      <td>Wirimu</td>
+      <td>mary.wirimu@gmail.com</td>
+      <td>mwirimu</td>
+      <td>+254702345678</td>
+      <td>2000-01-30</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>David</td>
+      <td>Otieno</td>
+      <td>david.otieno@gmail.com</td>
+      <td>davo</td>
+      <td>+254703456789</td>
+      <td>1993-11-05</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Faith</td>
+      <td>Mutiso</td>
+      <td>faith.mutiso@gmail.com</td>
+      <td>faithy</td>
+      <td>+254704567890</td>
+      <td>1999-09-15</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Peter</td>
+      <td>Ndungu</td>
+      <td>peter.ndungu@gmail.com</td>
+      <td>pndungu</td>
+      <td>+254705123789</td>
+      <td>1997-05-09</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Angela</td>
+      <td>Mutua</td>
+      <td>angela.mutua@gmail.com</td>
+      <td>angiem</td>
+      <td>+254706987321</td>
+      <td>2002-10-20</td>
+      <td>Female</td>
+    </tr>
   </table>
+
+  <footer>
+    © 2025 Dashboard | Designed by Brian
+  </footer>
 </body>
 </html>

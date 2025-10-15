@@ -2,217 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>Login — Pure HTML</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Charity Minds — Homepage</title>
-
-  <style>
-    :root{
-      --bg: #f6f8fb;
-      --card: #ffffff;
-      --accent: #0b6efd;
-      --muted: #6b7280;
-      --radius: 12px;
-    }
-
-    html,body{
-      height:100%;
-      margin:0;
-      font-family: Inter, system-ui, sans-serif;
-      background: linear-gradient(180deg, var(--bg), #eef3fb 60%);
-      color:#111827;
-    }
-
-    /* Top-right navigation */
-    .top-nav {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .top-nav a {
-      text-decoration: none;
-      color: var(--muted);
-      padding: 8px 12px;
-      border-radius: 8px;
-      font-size: 14px;
-      transition: 0.2s;
-    }
-
-    .top-nav a:hover {
-      background: rgba(11,110,253,0.08);
-      color: var(--accent);
-    }
-
-    .top-nav .btn {
-      background: linear-gradient(180deg,var(--accent),#0958d6);
-      color: white;
-      font-weight: 600;
-    }
-
-    .top-nav .btn:hover {
-      background: #0848b5;
-    }
-
-    /* Centering container */
-    .wrap {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-      box-sizing: border-box;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: 0 6px 20px rgba(16,24,40,0.08);
-      padding: 28px;
-      width: 100%;
-      max-width: 920px;
-      box-sizing: border-box;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-    }
-
-    @media (max-width: 760px) {
-      .card { grid-template-columns: 1fr; padding: 18px; }
-      .top-nav { top: 12px; right: 12px; }
-    }
-
-    h1 { margin: 0 0 8px 0; font-size: 20px; }
-    p.lead { margin: 0 0 16px 0; color: var(--muted); font-size: 14px; }
-
-    form { display: flex; flex-direction: column; gap: 12px; }
-
-    label { font-size: 13px; color: #374151; }
-    input, textarea, select {
-      padding: 10px 12px;
-      border-radius: 8px;
-      border: 1px solid #e6e9ef;
-      font-size: 14px;
-      outline: none;
-    }
-    input:focus, textarea:focus, select:focus {
-      border-color: rgba(11,110,253,0.6);
-      box-shadow: 0 0 0 4px rgba(11,110,253,0.06);
-    }
-
-    .btn-submit {
-      padding: 10px 14px;
-      border-radius: 10px;
-      background: linear-gradient(180deg,var(--accent),#0958d6);
-      color: white;
-      border: none;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .btn-reset {
-      padding: 10px 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(11,110,253,0.12);
-      background: transparent;
-      color: var(--accent);
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .footer {
-      margin-top: 16px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top-right navigation -->
-  <nav class="top-nav" aria-label="Main navigation">
-    <!-- Auth links first -->
-    <a href="#" class="btn" title="Register">Register</a>
-    <a href="#" class="btn" title="Login">Login</a>
 
-    <!-- Divider -->
-    <span style="color:#ccc;">|</span>
+  <div class="page-wrapper">
+    <!-- Top navigation -->
+    <nav class="navbar">
+      <button class="nav-btn active">Login</button>
+      <button class="nav-btn">Register</button>
+    </nav>
 
-    <!-- Main navigation -->
-    <a href="#" title="Home">Home</a>
-    <a href="#" title="About">About</a>
-    <a href="#" title="Donate">Donate</a>
-    <a href="#" title="Contact">Contact</a>
-  </nav>
+    <!-- Login section -->
+    <main class="login-container">
+      <h1>Login</h1>
 
-  <!-- Center content -->
-  <div class="wrap">
-    <main class="card">
-      <!-- Left form -->
-      <section>
-        <h1>Contact / Volunteer</h1>
-        <p class="lead">Reach out to join as a volunteer or to ask questions.</p>
+      <form action="#" method="post" autocomplete="on" class="login-form">
+        <label for="loginIdentifier">Email or Username:</label>
+        <input id="loginIdentifier" name="loginIdentifier" type="text" required />
 
-        <form>
-          <label for="name">Full name</label>
-          <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+        <label for="loginPassword">Password:</label>
+        <input id="loginPassword" name="loginPassword" type="password" required />
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        <div class="checkbox-container">
+          <input id="acceptPrivacy" name="acceptPrivacy" type="checkbox" required />
+          <label for="acceptPrivacy">I accept the <a href="#">Privacy Policy</a>.</label>
+        </div>
 
-          <label for="role">I am interested in</label>
-          <select id="role" name="role">
-            <option>General volunteering</option>
-            <option>Fundraising</option>
-            <option>Event support</option>
-            <option>Mentorship</option>
-          </select>
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell us a bit about you..."></textarea>
-
-          <div style="display:flex; gap:10px; margin-top:6px;">
-            <button class="btn-submit" type="submit">Send message</button>
-            <button class="btn-reset" type="reset">Reset</button>
-          </div>
-        </form>
-      </section>
-
-      <!-- Right form -->
-      <section>
-        <h1>Sign up</h1>
-        <p class="lead">Subscribe for updates or become a donor.</p>
-
-        <form>
-          <label for="org">Organization (optional)</label>
-          <input id="org" name="organization" type="text" placeholder="Organization name">
-
-          <label for="subscriber-email">Email</label>
-          <input id="subscriber-email" name="subscriber-email" type="email" placeholder="your@email.com" required>
-
-          <label for="password">Create password</label>
-          <input id="password" name="password" type="password" placeholder="At least 8 characters" minlength="8" required>
-
-          <label for="pref">Preferences</label>
-          <select id="pref" name="preferences">
-            <option>Newsletters</option>
-            <option>Events & Updates</option>
-            <option>Fundraising</option>
-          </select>
-
-          <div style="margin-top:6px;">
-            <button class="btn-submit" type="submit">Create account</button>
-          </div>
-        </form>
-      </section>
+        <button type="submit">Login</button>
+      </form>
     </main>
-  </div>
 
-  <div class="footer">
-    © <strong>Charity Minds</strong> — demo page
+    <hr />
+
+    <footer>
+      <small>Don't have an account? <a href="register.html">Register here</a>.</small>
+    </footer>
   </div>
 </body>
 </html>

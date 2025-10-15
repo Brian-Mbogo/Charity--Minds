@@ -1,0 +1,230 @@
+
+
+/** * CSS for Login Page
+
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0a0a0f;
+  color: #fff;
+  min-height: 100vh;
+
+ 
+}
+
+/* Wrapper layout */
+.page-wrapper {
+  background: #06be0f;
+  border-radius: 16px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* Navbar (Flexbox) */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background: #1a1a25;
+  padding: 1rem 0;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: #bbb;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-btn.active,
+.nav-btn:hover {
+  color: #00ffff;
+}
+
+/* Login container (Grid) */
+.login-container {
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.5rem;
+  gap: 1rem;
+  text-align: center;
+}
+
+.login-container h1 {
+  color: #00ffff;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Login form (Grid) */
+.login-form {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.login-form label {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #1e1e2a;
+  color: #fff;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.login-form input::placeholder {
+  color: #777;
+}
+
+/* Checkbox section */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.checkbox-container a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+/* Login button */
+.login-form button {
+  background: #00ffff;
+  color: #111;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-form button:hover {
+  background: #00cccc;
+}
+
+/* Divider line */
+hr {
+  border: none;
+  border-top: 1px solid #1a1a25;
+  margin: 0;
+}
+
+/* Footer (Flexbox) */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  color: #777;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: #00ffff;
+  text-decoration: none;
+
+}
+
+body{
+  background-color: #c5cedd;
+  margin: auto;
+  padding: 0;
+}
+
+/*dashboard css*/
+
+.analytics {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  background: #072cfc;
+  border-radius: 12px;
+  text-align: center;
+  width: 200px;
+  height:200px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+/*
+nav ul li {
+  display:inline;
+} */
+
+ul {
+  display:flex;
+  justify-content: right;
+  margin: 20px;
+  padding: 0;
+  gap: 20px;
+  list-style: none;
+}
+
+
+.section-title{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+  color:blue;
+}
+
+/*registered user section*/
+
+table{
+  width:90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #06be0f
+}
+
+th, td{
+  padding: 12px 15px;
+  text-align:center;
+  border: 1 px solid #ddd;
+
+}
+th {
+  background-color: #2d6969;
+  text-transform: uppercase;
+  color: #00ffff;
+}
+
+footer{
+  text-align: center;
+  background-color: #b8b5c5;
+  color: #110350;
+  margin-top: 40px;
+}
+
+
+
+
+
+
+
