@@ -5,21 +5,34 @@
   <title>Login — Pure HTML</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head> 
-<a href="style.css" rel="stylesheet" />
+<link rel="stylesheet" href="style.css">
 <body>
+  <div class="nav-box" position:absolute; border: 10px> 
+    <nav>
+  <ul>
+    <li>
+      <a href="Register.html">Register</a>
+    </li>
+    <li>
+      <a href="Dashboard.html">Dashboard</a>
+    </li>
+    <li>
+      <a href="HOME.html">HOME</a>
+    </li>
+  </ul>
 
   <h1>Login</h1>
 
-  <!-- Login form -->p
+  <!-- Login form -->
   <form action="#" method="post" autocomplete="on">
-    <label for="loginIdentifier">Email or Username:</label><br />
-    <input id="loginIdentifier" name="loginIdentifier" type="text" required /><br /><br />
+    <label for="loginIdentifier">Email or Username:</label><br>
+    <input id="loginIdentifier" name="loginIdentifier" type="text" required /><br>
 
-    <label for="loginPassword">Password:</label><br />
-    <input id="loginPassword" name="loginPassword" type="password" required /><br /><br />
+    <label for="loginPassword">Password:</label><br>
+    <input id="loginPassword" name="loginPassword" type="password" required /><br>
 
-    <input id="acceptPrivacy" name="acceptPrivacy" type="checkbox" required />
-    <label for="acceptPrivacy">I accept the <a href="#" title="Privacy Policy">Privacy Policy</a>.</label><br /><br />
+    <input id="acceptPrivacy" name="acceptPrivacy" type="checkbox" required /><br>
+    <label for="acceptPrivacy">I accept the <a href="#" title="Privacy Policy">Privacy Policy</a>.</label>
 
     <button type="submit">Login</button>
   </form>
