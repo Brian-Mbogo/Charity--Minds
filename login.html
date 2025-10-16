@@ -1,45 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Login — Pure HTML</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-</head> 
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LOGIN PAGE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <div class="nav-box" position:absolute; border: 10px> 
-    <nav>
+  
+<div class="nav-box" position:absolute; border: 10px> 
+ <nav>
   <ul>
+    <li>
+      <a href="Login.html">Login</a>
+    </li>
     <li>
       <a href="Register.html">Register</a>
     </li>
     <li>
       <a href="Dashboard.html">Dashboard</a>
     </li>
-    <li>
-      <a href="HOME.html">HOME</a>
-    </li>
+    
   </ul>
+</nav>
+</div>
 
-  <h1>Login</h1>
+  <main class="login-wrapper">
+    <h1>Log in</h1>
 
-  <!-- Login form -->
-  <form action="#" method="post" autocomplete="on">
-    <label for="loginIdentifier">Email or Username:</label><br>
-    <input id="loginIdentifier" name="loginIdentifier" type="text" required /><br>
+    <form action="#" method="post" autocomplete="on" class="login-form">
+      <table>
+        <tr>
+          <td><label for="loginIdentifier">Email or Username:</label></td>
+          <td><input id="loginIdentifier" name="loginIdentifier" type="text" required /></td>
+        </tr>
+        <tr>
+          <td><label for="loginPassword">Password:</label></td>
+          <td><input id="loginPassword" name="loginPassword" type="password" required /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td
+            <label class="checkbox">
+            <input type="checkbox" />
+            <span>Remember me</span>
+          </label>
+        </tr>
+      </table>
+    </form>
+    <div class="btn">
+      <button type="submit">Login</button>
+    </div>
 
-    <label for="loginPassword">Password:</label><br>
-    <input id="loginPassword" name="loginPassword" type="password" required /><br>
-
-    <input id="acceptPrivacy" name="acceptPrivacy" type="checkbox" required /><br>
-    <label for="acceptPrivacy">I accept the <a href="#" title="Privacy Policy">Privacy Policy</a>.</label>
-
-    <button type="submit">Login</button>
-  </form>
+    <div class="login-help">
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+  </main>
 
   <hr />
   <footer>
-    <small>Don't have an account? <a href="register.html">Register here</a>.</small>
+     © 2025 Dashboard | Designed by Brian
   </footer>
 </body>
 </html>

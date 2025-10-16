@@ -1,98 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Register — Pure HTML</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
-  <div class="nav-box" position:absolute; border: 10px;>
-    <nav>
+ 
+<div class="nav-box" position:absolute; border: 10px> 
+ <nav>
   <ul>
     <li>
       <a href="Login.html">Login</a>
     </li>
     <li>
-      <a href="Dashboard.html">Dashboard</a>
+      <a href="Home.html">Home</a>
     </li>
     <li>
-      <a href="HOME.html">HOME</a>
+      <a href="Dashboard.html">Dashboard</a>
     </li>
+    
   </ul>
-  </nav>
-  <h1>Register</h1>
+</nav>
+</div>
 
-  <!-- Registration form -->
-  <!-- NOTE: action is left as '#' because this is pure HTML. Replace with server endpoint if you connect one. -->
-  <form action="#" method="post" autocomplete="on">
-    <!-- Personal info -->
-    <fieldset>
-      <legend>Personal information</legend>
+  <main class="register-wrapper">
+    <h1>Create account</h1>
+    <form class="register-form" action="#" method="post" autocomplete="on">
+      <label for="firstName">First name</label>
+      <input id="firstName" name="firstName" type="text" required />
 
-      <label for="firstName">First name:</label><br />
-      <input id="firstName" name="firstName" type="text" required /><br /><br />
+      <label for="lastName">Last name</label>
+      <input id="lastName" name="lastName" type="text" required />
 
-      <label for="lastName">Last name:</label><br />
-      <input id="lastName" name="lastName" type="text" required /><br /><br />
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
 
-      <label for="email">Email address:</label><br />
-      <input id="email" name="email" type="email" required /><br /><br />
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" required />
 
-      <label for="phone">Phone (optional):</label><br />
-      <input id="phone" name="phone" type="tel" /><br /><br />
-    </fieldset>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required />
 
-    <!-- Account credentials -->
-    <fieldset>
-      <legend>Account details</legend>
+      <button type="submit">Register</button>
+    </form>
 
-      <label for="username">Username:</label><br />
-      <input id="username" name="username" type="text" required /><br /><br />
-
-      <label for="password">Password:</label><br />
-      <input id="password" name="password" type="password" required minlength="6" /><br /><br />
-
-      <label for="confirmPassword">Confirm password:</label><br />
-      <input id="confirmPassword" name="confirmPassword" type="password" required minlength="6" /><br /><br />
-    </fieldset>
-
-    <!-- Extra fields: gender, DOB -->
-    <fieldset>
-      <legend>More info</legend>
-
-      <label>Gender:</label><br />
-      <input type="radio" id="genderMale" name="gender" value="male" required />
-      <label for="genderMale">Male</label>
-
-      <input type="radio" id="genderFemale" name="gender" value="female" />
-      <label for="genderFemale">Female</label>
-
-      <input type="radio" id="genderOther" name="gender" value="other" />
-      <label for="genderOther">Other</label><br /><br />
-
-      <label for="dob">Date of birth (type/look like a calendar):</label><br />
-      <!-- input type="date" shows a calendar picker in modern browsers -->
-      <input id="dob" name="dob" type="date" required /><br /><br />
-    </fieldset>
-
-    <!-- Terms & privacy -->
-    <fieldset>
-      <legend>Agreements</legend>
-
-      <input id="terms" name="terms" type="checkbox" required />
-      <label for="terms">I accept the <a href="#" title="Terms & Conditions">Terms &amp; Conditions</a>.</label><br /><br />
-
-      <input id="privacy" name="privacy" type="checkbox" required />
-      <label for="privacy">I accept the <a href="#" title="Privacy Policy">Privacy Policy</a>.</label><br /><br />
-    </fieldset>
-
-    <button type="submit">Register</button>
-  </form>
-
-  <hr />
-  <footer>
-    <small>Already registered? <a href="login.html">Login here</a>.</small>
-  </footer>
+    <div class="register-help">
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </main>
 </body>
 </html>
