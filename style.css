@@ -1,43 +1,53 @@
-body {
+/* Basic reset / layout */
+html, body {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+body {
   background: #f4f6f8;
   color: #222;
   min-height: 100vh;
 
-  /* added to make footer stick to bottom */
+  /* makes footer appear at the bottom of the screen */
   display: flex;
-  flex-direction: column;
+  flex-direction:column ;
+}
+
+/* Header / nav: keep in normal flow so it doesn't cover content */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: relative; /* not fixed */
+  z-index: 10;
 }
 
 /* Navigation */
 .nav-box {
-  background: #1d8bec;
-  padding: 12px 20px;
-  position: relative;
-  align-items: center;
-  justify-content: flex-end;
-  display: flex;
+  position: relative; /* ensure nav doesn't overlap content */
+  z-index: 9;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+  box-shadow: #080404;
+  text-align: right;
 
 
-
-}
-nav ul {
-  list-style: none;
+} 
+.nav-box ul {
   margin: 0;
-  padding: 0;
+  padding: 8px 20px;
+  list-style: none;
   display: flex;
   gap: 16px;
+  justify-content: flex-end;
 }
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  z-index: 10000;
-  pointer-events: auto;
-}
-nav a:hover { text-decoration: underline; }
 
 /* Analytics cards */
 .analytics {
@@ -45,27 +55,33 @@ nav a:hover { text-decoration: underline; }
   justify-content: center;
   gap: 32px;
   margin: 40px 0 32px 0;
-}
+  flex-wrap: wrap;
+}  */
 
 .card {
-  background: #fff;
+  background: #47a37b;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   padding: 32px 40px;
   text-align: center;
   min-width: 180px;
+  flex: 1 1 200px;
+  box-sizing: border-box;
+  max-width: 300px;
+  gap: 20px;
 }
 
 .card h2 {
   margin: 0 0 8px 0;
   font-size: 2.5rem;
   color: #3498db;
+  gap: 20px;
 }
 
 .card p {
   margin: 0;
   color: #555;
   font-size: 1.1rem;
+  gap: 20px;
 }
 
 /* Section title */
@@ -83,7 +99,7 @@ table {
   margin: 32px auto 40px auto;
   border-collapse: collapse;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: #080404;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -114,16 +130,67 @@ footer {
   background: #080404;
   color: #fff;
   font-size: 0.9rem;
+  position: sticky;
 
-  /*  footer is pushed to the bottom */
+  /*  footer at the bottom */
   margin-top: auto;
+}
+
+.welcome{
+  background-color: #256fb0;
+ min-width: 30%;
+  font-size: 1.5em;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 7px;
+margin: 1%;
+text-align: left;
+border-width: 0.1%;
+
+}
+
+/*responsive dashboard css*/
+/*mobile [max 600px]*/
+@media (max-width: 600px) {
+  .analytics {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+
+  }
+.card{
+  width: 100%;
+  font-size: 0.85rem;
+}
+table{
+  width: 100%;
+  font-size: 0.85rem;
+}
+th, td {
+  padding: 8px 6px;
+}
+.nav-box ul {
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.site-header{
+  flex-direction: column;
+  text-align: center;
+}
+.logo{
+  width: 60px;
+  height: auto;
+}
 }
 
 /* Centered login card */
 .login-wrapper {
   max-width: 480px;
   margin: 48px auto;
-  background: #ffffff;
+  background:#fff;
   padding: 24px;
   border-radius: 8px;
  
@@ -137,7 +204,7 @@ footer {
 
 /* Table form layout */
 .login-form table { width: 100%; border-collapse: collapse; }
-.login-form td { padding: 8px 6px; vertical-align: middle; }
+.login-form td { padding: 8px 6px; vertical-align: center; }
 
 /* Inputs and button */
 .login-form input[type="text"],
@@ -147,7 +214,7 @@ footer {
   border: 1px solid #ccd6df;
   border-radius: 4px;
   font-size: 1rem;
-  background: #fff;
+  background: white;
 }
 
 .login-form .checkbox { font-size: 0.95rem; display: inline-flex; gap: 8px; align-items: center; }
@@ -161,14 +228,35 @@ footer {
   cursor: pointer;
   font-weight: 600;
   text-align: center;
+  padding: 10px ;
+  font-weight: 600 ;
 
 }
+
 .btn button:hover {
 transition: transform 0.5s;}
 
+
+.login-form btn{
+  width: 100%;
+  padding: 10px;
+  background: #2c81c9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.login-help{
+   margin-top: 12px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
 /* Register text */
 .register { margin: 8px 0 0 0; font-size: 0.95rem; }
-.register a { color: #2c81c9; text-decoration: none; }
+.register a { color: #2c81c9; text-decoration: none; text-align: center;}
 .register a:hover { text-decoration: underline; }
 
 
@@ -192,18 +280,18 @@ transition: transform 0.5s;}
   text-decoration: none;
   color: #fff;
   background: #2c81c9;
+  box-shadow: #080404;
   padding: 8px 10px;
   border-radius: 4px;
 }
 
-/* Register page (styles mirror the login page) */
+/* Register page  css styling */
 .register-wrapper {
   max-width: 420px;
-  margin: 100px auto 40px; /* keep below top menu */
+  margin: 100px auto 40px; 
   background: #fff;
   padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border-radius: 12px;
 }
 
 .register-wrapper h1 {
@@ -212,10 +300,10 @@ transition: transform 0.5s;}
   font-size: 1.2rem;
 }
 
-/* simple form layout */
+/* simple form layout  */
 .register-form label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   font-size: 0.95rem;
 }
 .register-form input,
@@ -225,8 +313,9 @@ transition: transform 0.5s;}
   margin-bottom: 12px;
   border: 1px solid #d0d7de;
   border-radius: 4px;
-  background: #fff;
+  background: #f4f8f8;
   font-size: 0.95rem;
+ 
 }
 
 .register-form button {
@@ -269,6 +358,7 @@ transition: transform 0.5s;}
   display: flex;
   align-items: center;
   gap: 10px;
+  text-transform: uppercase;
 }
 
 .site-header .logo {
@@ -288,12 +378,9 @@ transition: transform 0.5s;}
   margin-top: 80px; /* adjust if header height changes */
 }
 
-
-
-
 /* Logo header styles - append to the end of your style.css */
 :root {
-  --header-gap: 12px;
+  --header-gap: 1px;
   --header-height: 56px;
 }
 
@@ -316,7 +403,7 @@ transition: transform 0.5s;}
   display: block;
 }
 
-/* logo text */
+/* logo text  charity.minds*/
 .site-header .site-title {
   font-weight: 700;
   color: #0b2b4a;
@@ -324,7 +411,7 @@ transition: transform 0.5s;}
   line-height: 1;
 }
 
-/* top-right global menu (if you want it on every page) */
+/* top-right menu  */
 .top-nav {
   position: relative;
   top: var(--header-gap);
